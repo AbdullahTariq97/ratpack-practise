@@ -1,0 +1,27 @@
+//buildscript {
+//    repositories {
+//        mavenCentral()
+//    }
+//    dependencies {
+//        classpath "io.ratpack:ratpack-gradle:2.0.0-rc-1"
+//
+//    }
+//}
+
+plugins {
+    id 'java'
+}
+
+
+//apply plugin: "io.ratpack.ratpack-java"
+//apply plugin: "idea"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "io.ratpack:ratpack-gradle:2.0.0-rc-1"
+    implementation 'io.ratpack:ratpack-guice:1.9.0'
+}
+

@@ -1,0 +1,4 @@
+rootProject.name = 'ratpack-practise'
+include 'injection'
+include 'ratpack-application'
+
