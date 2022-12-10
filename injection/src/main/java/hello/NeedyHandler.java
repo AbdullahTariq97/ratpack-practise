@@ -1,25 +1,24 @@
 package hello;
 
 import com.google.inject.Inject;
-import ratpack.handling.Context;
-import ratpack.handling.Handler;
+import ratpack.core.handling.Context;
+import ratpack.core.handling.Handler;
 
 public class NeedyHandler implements Handler {
 
     private SomeService someService;
-//    private SomeOtherService someOtherService;
+    private SomeOtherService someOtherService;
 
     @Inject
-    public NeedyHandler(SomeService someService){
+    public NeedyHandler(SomeService someService, SomeOtherService someOtherService){
         this.someService = someService;
-//        this.someOtherService = someOtherService;
+        this.someOtherService = someOtherService;
     }
 
 
     @Override
-    public void handle(Context ctx) throws Exception {
+    public void handle(Context ctx) {
         someService.use();
-//        someOtherService.use();
-
+        someOtherService.use(ctx);
     }
 }

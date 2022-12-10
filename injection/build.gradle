@@ -7,13 +7,7 @@ repositories {
 }
 
 dependencies {
-    implementation "io.ratpack:ratpack-gradle:2.0.0-rc-1"
-    implementation 'io.ratpack:ratpack-guice:1.9.0'
-
-    implementation 'junit:junit:4.11'
+    implementation 'io.ratpack:ratpack-core:1.9.0'
+    implementation 'io.ratpack:ratpack-guice:2.0.0-rc-1' // contains ratpacl.guice package which bring Guice.java
     implementation "org.slf4j:slf4j-simple:1.7.21"
-
-//    implementation "com.google.inject.extensions:guice-assistedinject:4.2.2"
-//    implementation 'com.google.inject.extensions:guice-multibindings:4.2.3'
-
 }
