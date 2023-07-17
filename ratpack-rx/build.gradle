@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version 'unspecified'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    implementation 'io.ratpack:ratpack-rx:1.7.5' // includes ratpack and rxjava
+    testImplementation 'io.ratpack:ratpack-test:1.7.5' // includes the Exec harness needed to test rxjava observable
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation 'org.assertj:assertj-core:3.2.0'
+}
+
+test {
+    useJUnitPlatform()
+}

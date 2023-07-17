@@ -4,7 +4,6 @@ buildscript {
     }
     dependencies {
         classpath "io.ratpack:ratpack-gradle:2.0.0-rc-1"
-
     }
 }
 
@@ -17,5 +16,8 @@ repositories {
 
 dependencies {
     implementation "org.slf4j:slf4j-simple:1.7.21"
+
+    implementation 'io.ratpack:ratpack-rx:1.7.5' // includes ratpack and rxjava
+    testImplementation 'io.ratpack:ratpack-test:1.7.5' // includes the Exec harness needed to test rxjava observable
 }
 
